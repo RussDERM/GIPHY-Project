@@ -1,0 +1,19 @@
+/* Styles buttons */
+button {
+    box-shadow: 0px 10px 10px 0px;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    margin: 5px;
+    border: 0px;
+}
+
+#topic-button {
+    background-color: lightcoral;
+    border: 0px;
+}
+
+#submit-button {
+    background-color: teal;
+    border: 0px;
+}
+
