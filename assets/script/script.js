@@ -9,6 +9,8 @@
 // select submit button, attach click event
 $('#submit-button').on('click', function () {
 
+    var imgURL = [];
+
     //variable to set queryURL
     var queryURL = 'https://api.giphy.com/v1/gifs/search?q=explosion&api_key=csKwWJmlyqvvCH9Z5iDDevJnvgIvylmn&limit=10'
     //ajax call
@@ -16,18 +18,31 @@ $('#submit-button').on('click', function () {
         url: queryURL,
         method: 'GET'
     }).then(function (response) {
-        var imgData = response
-        console.log(response);
-        //need a loop to cycle through the response and grab what I need
-        for (let i = 0; i < 9; i++) {
+        var imgData = response.data;
+        for (let i = 0; i < 10; i++) {
 
-
+            imgURL = imgData[3].url;
         }
-        //variables, to store rating and img url
-        var imgURL = response.
+        //var imgURL = imgData[i];
+        console.log(imgData);
+        console.log(imgURL);
 
+
+        // console.log(imgURL);
 
     });
+    //console.log(imgData);
+    console.log()
+    //need a loop to cycle through the response and grab what I need
+    // for (let i = 0; i < 9; i++) {
+
+    //     var imgURL = imgData.data.[i]
+
+
+    // }
+    //variables, to store rating and img url
+
 
 
 });
+
